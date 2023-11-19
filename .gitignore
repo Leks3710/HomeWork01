@@ -30,5 +30,9 @@ bin/
 /.idea/
 /.idea/workspace.xml
 /.idea/
+/Allure_Maven/target/
+/Allure_Maven/.allure/
+/HomeWork5_Gradle/.gradle/
+/HomeWork5_Gradle/build/
 /HomeWork4_Maven_Allure/target/
 /HomeWork4/target/

@@ -12,17 +12,19 @@ public class Carnivorous extends Animals {
         return null;
     }
 
-    public int animalSize(){return 0;}
+    public int animalSize() {
+        return 0;
+    }
 
     @Override
     public void eat(Food food) {
-        try{
-            if (!(food instanceof Meet)){
+        try {
+            if (!(food instanceof Meet)) {
                 throw new WrongFoodException("Не ест траву");
             }
             System.out.println("Ест " + food.name());
             this.setSatiety(food.getSatietyHigh());
-        } catch (WrongFoodException exception){
+        } catch (WrongFoodException exception) {
             exception.printStackTrace();
         }
     }
