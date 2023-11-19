@@ -36,7 +36,7 @@ public class ResultTestDataProvider {
      * @return двухмерный массив объектвый (return Object для DataProvider)
      */
     @DataProvider
-    public Object[][] getTestPositiveResult() {
+    public Object[][] getTestPositiveDataProvideResult() {
         return new Object[][]{
                 {"10", "5", "-", 5},
                 {"-500", "500", "+", 0},
@@ -50,7 +50,7 @@ public class ResultTestDataProvider {
      * @return двухмерный массив объектвый (return Object для DataProvider)
      */
     @DataProvider
-    public Object[][] getTestNegativeResult() {
+    public Object[][] getTestNegativeDataProvideResult() {
         return new Object[][]{
                 {"100", "0", "/"},
         };
@@ -59,16 +59,16 @@ public class ResultTestDataProvider {
     /**
      * Параметризированный позитивный тест
      */
-    @Test(dataProvider = "getTestPositiveResult", description = "Parametrized positive tests")
-    public void testPositiveResult(String one, String two, String operation, int expected) {
+    @Test(dataProvider = "getTestPositiveDataProvideResult", description = "Parametrized positive tests")
+    public void testPositiveDataProvideResult(String one, String two, String operation, int expected) {
         assertEquals(result.Result(one, two, operation), expected);
     }
 
     /**
      * Параметризированный негативный тест
      */
-    @Test(dataProvider = "getTestNegativeResult", expectedExceptions = BadException.class, description = "Parametrized negative tests")
-    public void testNegativeResult(String one, String two, String operation) {
+    @Test(dataProvider = "getTestNegativeDataProvideResult", expectedExceptions = BadException.class, description = "Parametrized negative tests")
+    public void testNegativeDataProvideResult(String one, String two, String operation) {
         result.Result(one, two, operation);
     }
 }

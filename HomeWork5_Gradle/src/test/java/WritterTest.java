@@ -6,11 +6,11 @@ import static org.testng.AssertJUnit.assertEquals;
 @Feature("WritterTest")
 public class WritterTest {
 
-    @Test(description = "Positive string test")
+    @Test(description = "String return check Hello World")
     @Severity(SeverityLevel.NORMAL)
     @Story("Positive string test")
-    @Description("The test for string verification")
-    public void testText(){
+    @Description("The test for string Hello World")
+    public void testPositiveStringTestText(){
         assertEquals(Writter.getText(), "Hello World!");
     }
 }
